@@ -1,0 +1,291 @@
+trialver = "3.7"
+fun = true
+trial = true
+saved = false
+if proto == false then
+trialver = "3.5"
+proto = true
+end
+
+function antiScammer()
+    local WarningGUI = Instance.new("ScreenGui")
+    local AHeaderF = Instance.new("Frame")
+    local ATextLabel = Instance.new("TextLabel")
+    local ACloseB = Instance.new("TextButton")
+    local AMinB = Instance.new("TextButton")
+    local WarningBody = Instance.new("Frame")
+    local RemindB = Instance.new("TextButton")
+    local SaveB = Instance.new("TextButton")
+    local TextLabel = Instance.new("TextLabel")
+    --Properties:
+    WarningGUI.Name = "WarningGUI"
+    WarningGUI.Parent = game.CoreGui
+    WarningGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    WarningGUI.ResetOnSpawn = false
+
+    AHeaderF.Name = "AHeaderF"
+    AHeaderF.Parent = WarningGUI
+    AHeaderF.Active = true
+    AHeaderF.Draggable = true
+    AHeaderF.BackgroundColor3 = Color3.new(0.145098, 0.156863, 0.172549)
+    AHeaderF.BackgroundTransparency = 0.20000000298023
+    AHeaderF.BorderSizePixel = 0
+    AHeaderF.Position = UDim2.new(0.125080243, -32, 0.244981766, 130)
+    AHeaderF.Size = UDim2.new(0, 270, 0, 25)
+
+    ATextLabel.Name = "ATextLabel"
+    ATextLabel.Parent = AHeaderF
+    ATextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+    ATextLabel.BackgroundTransparency = 1
+    ATextLabel.BorderSizePixel = 0
+    ATextLabel.Position = UDim2.new(0.0296296291, 0, 0, 0)
+    ATextLabel.Size = UDim2.new(0, 198, 0, 24)
+    ATextLabel.Font = Enum.Font.SourceSans
+    ATextLabel.Text = "Warning!"
+    ATextLabel.TextColor3 = Color3.new(1, 1, 1)
+    ATextLabel.TextScaled = true
+    ATextLabel.TextSize = 14
+    ATextLabel.TextWrapped = true
+    ATextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+    ACloseB.Name = "ACloseB"
+    ACloseB.Parent = AHeaderF
+    ACloseB.BackgroundColor3 = Color3.new(0.145098, 0.156863, 0.172549)
+    ACloseB.BackgroundTransparency = 0.99000000953674
+    ACloseB.BorderSizePixel = 0
+    ACloseB.Position = UDim2.new(0.90370369, 0, 0, 0)
+    ACloseB.Size = UDim2.new(0, 25, 0, 24)
+    ACloseB.Font = Enum.Font.SourceSans
+    ACloseB.Text = "X"
+    ACloseB.TextColor3 = Color3.new(1, 1, 1)
+    ACloseB.TextSize = 14
+
+    AMinB.Name = "AMinB"
+    AMinB.Parent = AHeaderF
+    AMinB.BackgroundColor3 = Color3.new(0.145098, 0.156863, 0.172549)
+    AMinB.BackgroundTransparency = 0.99000000953674
+    AMinB.BorderSizePixel = 0
+    AMinB.Position = UDim2.new(0.811111093, 0, 0, 0)
+    AMinB.Size = UDim2.new(0, 25, 0, 24)
+    AMinB.Font = Enum.Font.SourceSans
+    AMinB.Text = "_"
+    AMinB.TextColor3 = Color3.new(1, 1, 1)
+    AMinB.TextSize = 14
+
+    WarningBody.Name = "WarningBody"
+    WarningBody.Parent = AHeaderF
+    WarningBody.BackgroundColor3 = Color3.new(0.231373, 0.25098, 0.27451)
+    WarningBody.BackgroundTransparency = 0.15000000596046
+    WarningBody.BorderSizePixel = 0
+    WarningBody.Position = UDim2.new(0.00121606898, 0, 1.0000006, 0)
+    WarningBody.Size = UDim2.new(0, 270, 0, 115)
+
+    RemindB.Name = "RemindB"
+    RemindB.Parent = WarningBody
+    RemindB.BackgroundColor3 = Color3.new(0.188235, 0.203922, 0.223529)
+    RemindB.BackgroundTransparency = 0.20000000298023
+    RemindB.BorderSizePixel = 0
+    RemindB.Position = UDim2.new(0.0407406092, 0, 0.699398339, 0)
+    RemindB.Size = UDim2.new(0, 95, 0, 27)
+    RemindB.Font = Enum.Font.SourceSans
+    RemindB.Text = "Remind me later"
+    RemindB.TextColor3 = Color3.new(1, 1, 1)
+    RemindB.TextSize = 14
+
+    SaveB.Name = "SaveB"
+    SaveB.Parent = WarningBody
+    SaveB.BackgroundColor3 = Color3.new(0.188235, 0.203922, 0.223529)
+    SaveB.BackgroundTransparency = 0.20000000298023
+    SaveB.BorderSizePixel = 0
+    SaveB.Position = UDim2.new(0.414814591, 0, 0.696118653, 0)
+    SaveB.Size = UDim2.new(0, 147, 0, 27)
+    SaveB.Font = Enum.Font.SourceSans
+    SaveB.Text = "Close and never show again"
+    SaveB.TextColor3 = Color3.new(1, 1, 1)
+    SaveB.TextSize = 14
+
+    TextLabel.Parent = WarningBody
+    TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Position = UDim2.new(0.125925928, 0, 0.130434781, 0)
+    TextLabel.Size = UDim2.new(0, 200, 0, 50)
+    TextLabel.Font = Enum.Font.SourceSans
+    TextLabel.Text = "This GUI is free, always has been. If you have paid\nmoney for it. I suggest charging back or requesting\na refund immediately! Anyone claiming to sell it\nis a scammer!"
+    TextLabel.TextColor3 = Color3.new(1, 1, 1)
+    TextLabel.TextSize = 14
+    -- Scripts:
+
+    
+	ACloseB.MouseButton1Click:Connect(function()
+        WarningGUI:Destroy()
+	end)
+    
+	AMinB.MouseButton1Click:Connect(function()
+        if WarningBody.Visible == true then
+            WarningBody.Visible = false
+        else
+            WarningBody.Visible = true
+        end
+    end)
+    
+    RemindB.MouseButton1Click:Connect(function()
+        WarningGUI:Destroy()
+    end)
+    
+    SaveB.MouseButton1Click:Connect(function()
+        writefile("PostmanAntiScam.bin", "saved")
+        WarningGUI:Destroy()
+	end)
+end
+
+pcall(function()
+    local file2 = readfile("PostmanAntiScam.bin")
+  
+    if file2 == "saved" then
+        saved = true
+    end
+end)
+
+if saved == false then
+    antiScammer()
+end
+
+pcall(function()
+  local file = readfile("SynFunctions.bin")
+
+  if file == "Banned" then 
+    game.ReplicatedStorage.MainEvent:FireServer("CHECKER", child)
+    wait(1)
+    game.Players.LocalPlayer:Kick("Got this one too! -Pat")
+  end
+end)
+
+function banned(name, message)
+	if game.Players.LocalPlayer.Name == name then
+		game.ReplicatedStorage.MainEvent:FireServer("CHECKER", child)
+		wait(1)
+		game.Players.LocalPlayer:Kick(message)
+		writefile("SynFunctions.bin", "Banned")
+	end
+end
+
+banned("beantastegood", "wasn't bluffing")
+banned("gilmkph", "wasn't bluffing")
+banned("phucvovan123", "nerd")
+banned("Jayden12309cb", "nerd")
+banned("TrendingDad", "nerd")
+banned("BlackOnyx007", "Pynx says hi")
+banned("ev_0n", "Da Hood admins ignored me but Postman didn't - FlamethrowerMoments#0005")
+banned("evonha_cks", "Da Hood admins ignored me but Postman didn't - FlamethrowerMoments#0005")
+banned("Gamerkid44899", "I made it myself....")
+banned("EDfaeg", "IDK what am I gonna do?")
+banned("Bob82436", "bah nah nah nah, nah nah nah nah. - Bob from Despicable Me 2")
+banned("insxnne", "Hah goteeem")
+banned("superleper1000", "You Will No Longer Be Fast...")
+banned("TheHoloCloset", "I can fill you up ;)")
+banned("YoungxMoe", "Youre in my deathnote")
+banned("Dxprxsssion", "Cross the street to the hospital, down the street to the morgue.")
+banned("BSG_God", "kek")
+banned("BrickStacksFor", "Enjoy the money on a banned account.")
+banned("Viewoniy", "suck my dick")
+banned("saltstep", "I thought it was trash, yet you are here.")
+banned("gghaterslol", "Go scam a different industry please.")
+--banned("pizzapie344","you didn't do much, but you were fucking up my autogrinding so CYA :wave:")
+banned("TheBookOfChuzi", "loser")
+banned("sevensupergirl810", "hope the bounty was worth it")
+banned("level_0to93", "I said drop her - solid")
+banned("Jh3neAiko", "fajaggot")
+banned("jdxxen", "leak these nuts faggot")
+function update()
+	nerd = "you"
+	function upd(Nerd)
+		getrenv().PostmanUp = "im here nigga"
+		--GUI SHIT
+		local GUI = Instance.new("ScreenGui")
+		local FFF = Instance.new("Frame")
+		local TL = Instance.new("TextLabel")
+		local CB = Instance.new("TextButton")
+		local XB = Instance.new("TextButton")
+		--Properties:
+		GUI.Name = "GUI"
+		GUI.Parent = game.CoreGui
+		GUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		GUI.ResetOnSpawn = false
+
+		FFF.Name = "FFF"
+		FFF.Parent = GUI
+		FFF.Active = true
+		FFF.Draggable = true
+		FFF.BackgroundColor3 = Color3.new(0.254902, 0.27451, 0.301961)
+		FFF.BackgroundTransparency = 0.15000000596046
+		FFF.Position = UDim2.new(0.0110497242, 0, 0.326781332, 0)
+		FFF.Size = UDim2.new(0, 253, 0, 95)
+
+		TL.Name = "TL"
+		TL.Parent = FFF
+		TL.BackgroundColor3 = Color3.new(1, 1, 1)
+		TL.BackgroundTransparency = 1
+		TL.Position = UDim2.new(0.0276080184, 0, 0.228132129, 0)
+		TL.Size = UDim2.new(0, 238, 0, 35)
+		TL.Font = Enum.Font.SourceSans
+		TL.Text = "PSSST... Hey "..nerd.."! I fixed updated the autogrind.\n Click the button below to get the update."
+		TL.TextColor3 = Color3.new(1, 1, 1)
+		TL.TextSize = 14
+
+		CB.Name = "CB"
+		CB.Parent = FFF
+		CB.BackgroundColor3 = Color3.new(0.105882, 0.117647, 0.129412)
+		CB.BackgroundTransparency = 0.5
+		CB.Position = UDim2.new(0.279737085, 0, 0.66750294, 0)
+		CB.Size = UDim2.new(0, 110, 0, 25)
+		CB.Font = Enum.Font.SourceSans
+		CB.Text = "Copy to clipboard"
+		CB.TextColor3 = Color3.new(1, 1, 1)
+		CB.TextSize = 14
+
+		XB.Name = "XB"
+		XB.Parent = FFF
+		XB.BackgroundColor3 = Color3.new(0.105882, 0.117647, 0.129412)
+		XB.BackgroundTransparency = 0.5
+		XB.BorderSizePixel = 0
+		XB.Position = UDim2.new(0.927958488, 0, -0.00618125498, 0)
+		XB.Size = UDim2.new(0, 18, 0, 22)
+		XB.Font = Enum.Font.SourceSans
+		XB.Text = "X"
+		XB.TextColor3 = Color3.new(1, 1, 1)
+		XB.TextSize = 14
+		-- Scripts:
+
+		XB.MouseButton1Click:Connect(function()
+		GUI:Destroy()
+		getrenv().PostmanUp = ""
+		end)
+
+		CB.MouseButton1Click:Connect(function()
+		if proto then
+			setclipboard("https://pastebin.com/raw/mPCh7P9Q")
+		else
+			setclipboard("https://pastebin.com/raw/z17wDE8W")
+		end
+		GUI:Destroy()
+		getrenv().PostmanUp = ""
+		end)
+	end
+
+	if version == trialver then
+		print("You're up to date, good boy!")
+	else
+		print("Wowzers, you're on an old version! You should fix that.")
+		upd(nerd)
+	end
+end
+
+if getrenv().PostmanUp then
+	if getrenv().PostmanUp == "im here nigga" then
+
+	else
+		update()
+	end
+else
+	update()
+end
